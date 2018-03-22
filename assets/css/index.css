@@ -89,10 +89,7 @@
 .fontFam {
   font-family: 'Roboto Slab', serif;
 }
-.zmod {
-  z-index: 1000;
-  
-}
+
 
 .shadow {
   text-shadow:rgba(0,0,0,0.5) 3px 3px 2px;
