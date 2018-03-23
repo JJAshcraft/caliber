@@ -48,7 +48,7 @@
       <div class="jumbotron rounded-0 bg-dark features-blue">
         <h1 class="text-light fontFam font-weight-bold">Seriously Skilled.</h1>
         <p class="lead" style="color:rgb(247,247,247);min-width:250px;font-size:22px;">Our highly-skilled and trained painters understand the importance of preparation and craftsmanship.&nbsp;No matter the size of the project or the weather conditions, Caliber Coatings Inc. guarantees a job well done.<br></p>
-        <p><a class="btn btn-primary btn-lg pulseButton" role="button" href="#">Get Your Free Estimate Today.</a></p>
+        <p><a class="btn btn-primary btn-lg pulseButton" role="button" data-target="#estimate" data-toggle="modal">Get Your Free Estimate Today.</a></p>
       </div>
     </div>
   </div>
@@ -202,7 +202,7 @@
 
             <h2 class="text-center text-white" style="margin-bottom:0;font-family:'Roboto Slab', serif;">Get Your Free Residential Project Estimate</h2>
             <p class="text-center text-white" style="margin-bottom:0;"><br>Our highly-skilled and trained painters understand the importance of preparation and craftsmanship. No matter the size of the project or the weather conditions, Caliber Coatings Inc. guarantees a job well done.<br><br>
-            <a class="btn btn-primary text-center pulseButton" role="button" href="#">Ready for your free estimate?</a></p>
+            <a class="btn btn-warning text-center pulseButton" role="button" data-toggle="modal" data-target="#estimate" data-dismiss="modal">Ready for your free estimate?</a></p>
           </div>
           <img class="img-fluid" id="resGallery" src="assets\img\gallerychris.png" alt="">
           <img class="img-fluid" src="assets\img\kitchen.jpg" alt="">
@@ -255,9 +255,12 @@
 
             <h2 class="text-center text-white" style="margin-bottom:0;font-family:'Roboto Slab', serif;">Get Your Free Commercial Project Estimate</h2>
             <p class="text-center text-white" style="margin-bottom:0;"><br>Our highly-skilled and trained painters understand the importance of preparation and craftsmanship. No matter the size of the project or the weather conditions, Caliber Coatings Inc. guarantees a job well done.<br><br>
-            <a class="btn btn-warning text-center pulseButton" role="button" href="#">Ready for your free estimate?</a></p>
+<!-- modal testing -->
+<a class="btn btn-warning text-center pulseButton" role="button" data-toggle="modal" data-target="#estimate" data-dismiss="modal">Ready for your free estimate?</a></p>
+<!-- modal testing -->
+
           </div>
-          <img class="img-fluid"  src="comm1" alt="">
+          <img class="img-fluid"  src="assets\img\comm1.jpg" alt="">
           <img class="img-fluid" src="assets\img\comm2.jpg" alt="">
 
           <img class="img-fluid" src="assets\img\comm3.jpg" alt="">
@@ -319,13 +322,39 @@
                           from time to time. We will notify you about significant changes in the way we treat personal information by sending a notice to the primary email address specified in your account, by placing a prominent notice on our site,
                           and/or by updating any privacy information on this page. Your continued use of the Site and/or Services available through this Site after such modifications will constitute your: (a) acknowledgment of the modified Privacy Policy;
                           and (b) agreement to abide and be bound by that Policy.&nbsp;<br><br>
-                  
+
               </div>
             </div>
           </div>
 
     </div>
   </div>
+
+  <div id="estimate" class="modal fade">
+    <div class="modal-dialog rounded-0">
+      <h3 class="font-weight-bold fontFam text-center h1 text-white shadow bg-dark">Estimate</h3>
+
+      <div class="modal-content rounded-0">
+        <div class="modal-body m-0">
+          <form data-netlify="true" action="thank-you" method="POST" form name="estimator">
+<label>Name: <input type="text" name="name" placeholder="Full Name"></label>
+<label>Phone: <input type="text required Phone" name="phone" placeholder="111-222-3333"></label>
+<label>E-mail: <input type="text required email" name="email" placeholder="E-mail"></label>
+<label>Project Description: <textarea name="description" placeholder="description"></label>
+<button type="submit" name="submit">Send it.</button>
+          </form>
+        </div>
+      </div>
+
+  </div>
+  </div>
+
+
+
+
+
+
+
 
   <script src="assets/js/jquery.min.js"></script>
   <script src="assets/js/jquery.3.3.1.js"></script>
