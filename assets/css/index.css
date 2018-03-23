@@ -54,7 +54,7 @@
 }
 
 .hidden {
-  visibility: hidden;
+  display: none;
 }
 .g-recaptcha{
    margin: 15px auto !important;
