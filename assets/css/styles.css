@@ -4,7 +4,7 @@
     position:absolute;
     top:20px;
     /*float:left;*/
-    left:100px;
+    left:20px;
   }
 }
 
@@ -12,9 +12,9 @@
   .logo {
     z-index:100;
     position:absolute;
-    top:10px;
+    top:12px;
     /*float:left;*/
-    left:60px;
+    left:20px;
   }
 }
 
@@ -22,7 +22,7 @@
   .logo {
     z-index:100;
     position:absolute;
-    top:5px;
+    top:15px;
     /*float:left;*/
     left:5px;
   }
@@ -117,4 +117,3 @@
 .col-md-6.col-xl-7.imageCol {
   min-height:700px;
 }
-
