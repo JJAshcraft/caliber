@@ -48,7 +48,7 @@
       <div class="jumbotron rounded-0 bg-dark features-blue">
         <h1 class="text-light fontFam font-weight-bold">Seriously Skilled.</h1>
         <p class="lead" style="color:rgb(247,247,247);min-width:250px;font-size:22px;">Our highly-skilled and trained painters understand the importance of preparation and craftsmanship.&nbsp;No matter the size of the project or the weather conditions, Caliber Coatings Inc. guarantees a job well done.<br></p>
-        <p><a class="btn btn-primary btn-lg pulseButton" role="button" data-target="#estimate" data-toggle="modal">Get Your Free Estimate Today.</a></p>
+        <p><a class="btn btn-primary btn-lg pulseButton" role="button" href="" data-target="#estimate" data-toggle="modal">Get Your Free Estimate Today.</a></p>
       </div>
     </div>
   </div>
@@ -336,13 +336,41 @@
 
       <div class="modal-content rounded-0">
         <div class="modal-body m-0">
-          <form data-netlify="true" action="thank-you" method="POST" form name="estimator">
-<label>Name: <input type="text" name="name" placeholder="Full Name"></label>
-<label>Phone: <input type="text required Phone" name="phone" placeholder="111-222-3333"></label>
-<label>E-mail: <input type="text required email" name="email" placeholder="E-mail"></label>
-<label>Project Description: <textarea name="description" placeholder="description"></label>
-<button type="submit" name="submit">Send it.</button>
+
+          <form data-netlify="true" netlify-honeypot="sleezy" action="thank-you" method="POST" form name="estimator">
+            <div class="form-group row">
+              <p class="hidden"><label>Don't fill this out if you are human: <input name="sleezy"></label></p>
+              <label class="col-2 col-form-label">Name: </label>
+              <div class="col-10">
+                <input class="form-control" type="text" placeholder="Full Name" id="example-text-input">
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label class="col-2 col-form-label">Phone: </label>
+              <div class="col-10">
+                <input type="text required Phone" name="phone" class="form-control" placeholder="111-222-3333">
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label class="col-2 col-form-label">E-mail: </label>
+              <div class="col-10">
+                <input type="text required email" name="email" class="form-control" placeholder="E-mail">
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <div class="col-12">
+               <textarea name="description" class="form-control" rows="8" cols="60" placeholder="project description"></textarea>
+             </div>
+
+            </div>
+            <div netlify-recaptcha></div>
+  <button type="submit" class="btn btn-primary btn-block btn-lg">Send it.</button>
           </form>
+          </div>
+
         </div>
       </div>
 
