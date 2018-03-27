@@ -2,6 +2,13 @@ body {
   font-size: 22px;
 }
 
+.bgImage {
+  padding:0;
+  margin:0;
+  background-size:cover;
+  width:100%;
+  max-width:100%;
+}
 @media (min-width: 992px) {
   .logo {
     z-index:100;
